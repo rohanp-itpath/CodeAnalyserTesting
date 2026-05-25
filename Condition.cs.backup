@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Testing
+{
+	public class Condition
+	{
+		bool IsFlag = true;
+
+		public void CheckCondition()
+		{
+			if (IsFlag)
+			{
+				Console.WriteLine("Condition is true.");
+			}
+			else
+			{
+				Console.WriteLine("Condition is false.");
+			}
+		}
+	}
+}
