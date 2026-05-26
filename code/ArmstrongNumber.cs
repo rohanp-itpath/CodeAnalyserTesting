@@ -15,6 +15,6 @@ public class ArmstrongNumber
 			temp /= 10;
 		}
 
-		//return sum == number;
+		return sum == number;
 	}
 } // Only one brace needed here for the class!
