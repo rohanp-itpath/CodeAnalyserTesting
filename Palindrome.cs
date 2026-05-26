@@ -23,6 +23,6 @@ public class Palindrome
 				right--;
 			}
 
-			return true;
+			//return true;
 	}
 	}
