@@ -4,7 +4,7 @@ namespace Testing;
 
 public class Condition
 {
-    private readonly bool _isFlag;
+    public Condition(bool isFlag = true)
 
     public Condition(bool isFlag = true)
     {
