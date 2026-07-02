@@ -1,0 +1,78 @@
+{
+  "Hash": "33A2655C2F6D8B5213B83E0370B80E3F13BC46D38E1B9169C4E81CE6CF716384",
+  "CodePreview": "=== PROJECT ANALYSIS DOCUMENT ===\r\nTotal Files: 7\r\n=================================\r\n\r\n--- BEGIN FILE: code\\ArmstrongNumber.cs ---\r\n1: namespace Testing; // Removes one level of indentation and one s",
+  "FullCodeContent": "=== PROJECT ANALYSIS DOCUMENT ===\r\nTotal Files: 7\r\n=================================\r\n\r\n--- BEGIN FILE: code\\ArmstrongNumber.cs ---\r\n1: namespace Testing; // Removes one level of indentation and one set of braces\r\n2: \r\n3: public class ArmstrongNumber\r\n4: {\r\n5: \tpublic static bool IsArmstrong(int number)\r\n6: \t{\r\n7: \t\tint sum = 0;\r\n8: \t\tint temp = number;\r\n9: \t\tint digits = number.ToString().Length;\r\n10: \r\n11: \t\twhile (temp \u003E 0)\r\n12: \t\t{\r\n13: \t\t\tint digit = temp % 10;\r\n14: \t\t\tsum \u002B= (int)Math.Round(Math.Pow(digit, digits));\r\n15: \t\t\ttemp /= 10;\r\n16: \t\t}\r\n17: \r\n18: \t\t//return sum == number;\r\n19: \t}\r\n20: } // Only one brace needed here for the class!\r\n--- END FILE: code\\ArmstrongNumber.cs ---\r\n\r\n--- BEGIN FILE: Condition.cs ---\r\n1: using System;\r\n2: \r\n3: namespace Testing;\r\n4: \r\n5: public class Condition\r\n6: {\r\n7:     private readonly bool _isFlag;\r\n8: \r\n9:     public Condition(bool isFlag = true)\r\n10:     {\r\n11:         _isFlag = isFlag;\r\n12:     }\r\n13: \r\n14:     public void CheckCondition()\r\n15:     {\r\n16:         // Duplicate Block #1\r\n17:         if (_isFlag)\r\n18:         {\r\n19:             Console.WriteLine(\u0022Condition is true.\u0022);\r\n20:         }\r\n21:         else\r\n22:         {\r\n23:             Console.WriteLine(\u0022Condition is false.\u0022);\r\n24:         }\r\n25: \r\n26:         // Duplicate Block #2\r\n27:         if (_isFlag)\r\n28:         {\r\n29:             Console.WriteLine(\u0022Condition is true.\u0022);\r\n30:         }\r\n31:         else\r\n32:         {\r\n33:             Console.WriteLine(\u0022Condition is false.\u0022);\r\n34:         }\r\n35: \r\n36:         // Duplicate Block #3\r\n37:         int total = 0;\r\n38: \r\n39:         for (int i = 0; i \u003C 5; i\u002B\u002B)\r\n40:         {\r\n41:             total \u002B= i;\r\n42: \r\n43:             if (total \u003E 2)\r\n44:             {\r\n45:                 Console.WriteLine($\u0022Total: {total}\u0022);\r\n46:             }\r\n47:         }\r\n48: \r\n49:         // Duplicate Block #4\r\n50:         int anotherTotal = 0;\r\n51: \r\n52:         for (int i = 0; i \u003C 5; i\u002B\u002B)\r\n53:         {\r\n54:             anotherTotal \u002B= i;\r\n55: \r\n56:             if (anotherTotal \u003E 2)\r\n57:             {\r\n58:                 Console.WriteLine($\u0022Total: {anotherTotal}\u0022);\r\n59:             }\r\n60:         }\r\n61:     }\r\n62: \r\n63:     // Duplicate Method #1\r\n64:     public void ValidateCondition()\r\n65:     {\r\n66:         if (_isFlag)\r\n67:         {\r\n68:             Console.WriteLine(\u0022Condition is true.\u0022);\r\n69:         }\r\n70:         else\r\n71:         {\r\n72:             Console.WriteLine(\u0022Condition is false.\u0022);\r\n73:         }\r\n74:     }\r\n75: \r\n76:     // Duplicate Method #2\r\n77:     public void VerifyCondition()\r\n78:     {\r\n79:         if (_isFlag)\r\n80:         {\r\n81:             Console.WriteLine(\u0022Condition is true.\u0022);\r\n82:         }\r\n83:         else\r\n84:         {\r\n85:             Console.WriteLine(\u0022Condition is false.\u0022);\r\n86:         }\r\n87:     }\r\n88: \r\n89:     // Large Duplicate Method #3\r\n90:     public void ProcessNumbers()\r\n91:     {\r\n92:         int total = 0;\r\n93: \r\n94:         for (int i = 0; i \u003C 5; i\u002B\u002B)\r\n95:         {\r\n96:             total \u002B= i;\r\n97: \r\n98:             if (total \u003E 2)\r\n99:             {\r\n100:                 Console.WriteLine($\u0022Total: {total}\u0022);\r\n101:             }\r\n102:         }\r\n103:     }\r\n104: \r\n105:     // Large Duplicate Method #4\r\n106:     public void CalculateNumbers()\r\n107:     {\r\n108:         int total = 0;\r\n109: \r\n110:         for (int i = 0; i \u003C 5; i\u002B\u002B)\r\n111:         {\r\n112:             total \u002B= i;\r\n113: \r\n114:             if (total \u003E 2)\r\n115:             {\r\n116:                 Console.WriteLine($\u0022Total: {total}\u0022);\r\n117:             }\r\n118:         }\r\n119:     }\r\n120: }\r\n--- END FILE: Condition.cs ---\r\n\r\n--- BEGIN FILE: Factorial.cs ---\r\n1: namespace Testing;\r\n2: \r\n3: public class Factorial\r\n4: \t{\r\n5: \t\t// Iterative factorial method\r\n6: \t\tpublic static long Calculate(int number)\r\n7: \t\t{\r\n8: \t\t\tif (number \u003C 0)\r\n9: \t\t\t\tthrow new ArgumentException(\u0022Factorial is not defined for negative numbers.\u0022);\r\n10: \r\n11: \t\t\tlong result = 1;\r\n12: \t\t\tfor (int i = 1; i \u003C= number; i\u002B\u002B)\r\n13: \t\t\t{\r\n14: \t\t\t\tresult *= i;\r\n15: \t\t\t}\r\n16: \t\t\treturn result;\r\n17: \t//}\r\n18: }\r\n--- END FILE: Factorial.cs ---\r\n\r\n--- BEGIN FILE: Palindrome.cs ---\r\n1: namespace Testing;\r\n2: \r\n3: public class Palindrome\r\n4: \t{\r\n5: \t\t// Method to check if a string is a palindrome\r\n6: \t\tpublic static bool IsPalindrome(string input)\r\n7: \t\t{\r\n8: \t\t\tif (input == null)\r\n9: \t\t\t\tthrow new ArgumentNullException(nameof(input), \u0022Input cannot be null.\u0022);\r\n10: \r\n11: \t\t\tif (input.Length == 0)\r\n12: \t\t\t\treturn false;\r\n13: \r\n14: \t\t\tint left = 0;\r\n15: \t\t\tint right = input.Length - 1;\r\n16: \r\n17: \t\t\twhile (left \u003C right)\r\n18: \t\t\t{\r\n19: \t\t\t\tif (input[left] != input[right])\r\n20: \t\t\t\t\treturn false;\r\n21: \r\n22: \t\t\t\tleft\u002B\u002B;\r\n23: \t\t\t\tright--;\r\n24: \t\t\t}\r\n25: \r\n26: \t\t\t//return true;\r\n27: \t}\r\n28: \t}\r\n--- END FILE: Palindrome.cs ---\r\n\r\n--- BEGIN FILE: Program.cs ---\r\n1: using Testing;\r\n2: \r\n3: public class Program\r\n4: {\r\n5: \tpublic static void Main(string[] args)\r\n6: \t{\r\n7: \t\t// =========================\r\n8: \t\t// Factorial Section\r\n9: \t\t// =========================\r\n10: \t\tConsole.Write(\u0022Enter a number to calculate factorial: \u0022);\r\n11: \t\tstring? input = Console.ReadLine();\r\n12: \r\n13: \t\t// Validate input\r\n14: \t\tif (int.TryParse(input, out int number))\r\n15: \t\t{\r\n16: \t\t\ttry\r\n17: \t\t\t{\r\n18: \t\t\t\t// Call factorial logic\r\n19: \t\t\t\tlong factorial = Factorial.Calculate(number);\r\n20: \r\n21: \t\t\t\t// Output result\r\n22: \t\t\t\tConsole.WriteLine($\u0022Factorial of {number} is: {factorial}\u0022);\r\n23: \t\t\t}\r\n24: \t\t\tcatch (Exception ex)\r\n25: \t\t\t{\r\n26: \t\t\t\t// Handle runtime errors safely\r\n27: \t\t\t\tConsole.WriteLine($\u0022[ERROR] {ex.Message}\u0022);\r\n28: \t\t\t}\r\n29: \t\t}\r\n30: \t\telse\r\n31: \t\t{\r\n32: \t\t\t// Input validation failed\r\n33: \t\t\tConsole.WriteLine(\u0022[ERROR] Invalid input. Please enter a valid integer.\u0022);\r\n34: \t\t}\r\n35: \r\n36: \t\tConsole.WriteLine();\r\n37: \r\n38: \t\t// =========================\r\n39: \t\t// Armstrong Section\r\n40: \t\t// =========================\r\n41: \t\tConsole.Write(\u0022Enter a number to check if it\u0027s an Armstrong number: \u0022);\r\n42: \t\tstring? armstrongInput = Console.ReadLine();\r\n43: \r\n44: \t\t// Validate input\r\n45: \t\tif (int.TryParse(armstrongInput, out int armstrongNumber))\r\n46: \t\t{\r\n47: \t\t\ttry\r\n48: \t\t\t{\r\n49: \t\t\t\t// Call Armstrong logic\r\n50: \t\t\t\tbool isArmstrong = ArmstrongNumber.IsArmstrong(armstrongNumber);\r\n51: \r\n52: \t\t\t\t// Replace ternary with if-else\r\n53: \t\t\t\tConsole.WriteLine(isArmstrong ? $\u0022{armstrongNumber} is an Armstrong number.\u0022 : $\u0022{armstrongNumber} is NOT an Armstrong number.\u0022);\r\n54: \t\t\t}\r\n55: \t\t\tcatch (Exception ex)\r\n56: \t\t\t{\r\n57: \t\t\t\t// Handle runtime errors safely\r\n58: \t\t\t\tConsole.WriteLine($\u0022[ERROR] {ex.Message}\u0022);\r\n59: \t\t\t}\r\n60: \t\t}\r\n61: \t\telse\r\n62: \t\t{\r\n63: \t\t\t// Input validation failed\r\n64: \t\t\tConsole.WriteLine(\u0022[ERROR] Invalid input for Armstrong check. Please enter a valid integer.\u0022);\r\n65: \t\t}\r\n66: \r\n67: \t\tCondition condition = new Condition();\r\n68: \t\tcondition.CheckCondition();\r\n69: \t}\r\n70: }\r\n--- END FILE: Program.cs ---\r\n\r\n--- BEGIN FILE: Testing.csproj ---\r\n1: \u003CProject Sdk=\u0022Microsoft.NET.Sdk\u0022\u003E\r\n2: \r\n3:   \u003CPropertyGroup\u003E\r\n4:     \u003COutputType\u003EExe\u003C/OutputType\u003E\r\n5:     \u003CTargetFramework\u003Enet8.0\u003C/TargetFramework\u003E\r\n6:     \u003CImplicitUsings\u003Eenable\u003C/ImplicitUsings\u003E\r\n7:     \u003CNullable\u003Eenable\u003C/Nullable\u003E\r\n8:   \u003C/PropertyGroup\u003E\r\n9: \r\n10: \u003C/Project\u003E\r\n--- END FILE: Testing.csproj ---\r\n\r\n--- BEGIN FILE: Testing.slnx ---\r\n1: \u003CSolution\u003E\r\n2:   \u003CProject Path=\u0022Testing.csproj\u0022 /\u003E\r\n3: \u003C/Solution\u003E\r\n--- END FILE: Testing.slnx ---\r\n",
+  "Result": {
+    "ClassCount": 5,
+    "InterfaceCount": 0,
+    "Reasoning": [
+      "PASS 1 \u2014 Variable Lifecycle: Listed all variables, including _isFlag in Condition class.",
+      "PASS 2 \u2014 Constant Propagation: _isFlag is assigned a value in the constructor and never changes.",
+      "PASS 3 \u2014 Branch Reachability: else branch in CheckCondition method is dead if _isFlag is always true.",
+      "PASS 4 \u2014 Dead Code Detection: Found dead code in Condition class due to duplicate blocks and methods.",
+      "PASS 5 \u2014 Bug Classification: Classified bugs as Logic and Dead Code.",
+      "PASS 6 \u2014 Null Safety: No null safety issues found.",
+      "PASS 7 \u2014 Complexity Analysis: Calculated cyclomatic complexity for each method.",
+      "PASS 8 \u2014 Naming Convention Audit: Found naming convention issues in Condition class.",
+      "PASS 9 \u2014 Unused Imports: Found unused imports in Condition class.",
+      "PASS 10 \u2014 Namespace \u0026 Style Checks: Found namespace and style issues in Condition class."
+    ],
+    "MethodCount": 10,
+    "Namespaces": [
+      "Testing"
+    ],
+    "UsesEFCore": false,
+    "UsesASPNET": false,
+    "UsesXUnit": false,
+    "codeSmellsDetected": [
+      {
+        "type": "DuplicateCode",
+        "location": "Condition.cs",
+        "line": 17,
+        "description": "Duplicate block of code"
+      }
+    ],
+    "QualityScore": 80,
+    "keyObservations": [
+      "The code has several instances of dead code and duplicate code.",
+      "The code uses hardcoded values and does not follow user-defined rules.",
+      "The code has several areas for improvement in terms of code readability and maintainability."
+    ],
+    "Suggestions": [
+      {
+        "File": "Condition.cs",
+        "Method": "CheckCondition",
+        "Line": 17,
+        "Description": "Remove dead code and simplify conditional logic",
+        "AIPerspective": "Remove dead code to improve code readability and maintainability",
+        "UserRulesPerspective": "Follow user-defined rule to use ternary operator for simple conditional assignments",
+        "AlternateSuggestion": "Consider using a logging framework instead of Console.WriteLine",
+        "BestSolutionLabel": "Remove dead code and use ternary operator",
+        "BestSolutionExplanation": "Remove dead code and use ternary operator to simplify conditional logic and improve code readability",
+        "OriginalCode": "if (_isFlag) { Console.WriteLine(\u0022Condition is true.\u0022); } else { Console.WriteLine(\u0022Condition is false.\u0022); }",
+        "FixedCode": "string result = _isFlag ? \u0022Condition is true.\u0022 : \u0022Condition is false.\u0022; Console.WriteLine(result);",
+        "BugType": "Logic",
+        "DetailedBugType": "DeadCode",
+        "Severity": "High",
+        "RuntimeVerified": false,
+        "EdgeCaseInput": "_isFlag = true",
+        "EdgeCaseResult": "Condition is true."
+      }
+    ],
+    "projectLevelFindings": [
+      {
+        "type": "CodeSmell",
+        "location": "Condition.cs",
+        "line": 17,
+        "description": "Duplicate code"
+      }
+    ],
+    "NamespaceMembership": {
+      "ArmstrongNumber": "Testing",
+      "Condition": "Testing",
+      "Factorial": "Testing",
+      "Palindrome": "Testing",
+      "Program": "Testing"
+    }
+  }
+}
