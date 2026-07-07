@@ -4,27 +4,23 @@ namespace Testing
 {
     public class Palindrome
     {
-        // Method to check if a string is a palindrome
         public static bool IsPalindrome(string input)
         {
-            try 
+            try
             {
                 if (input == null)
-                    throw new System.Exception("Input cannot be null."); // CA2201
+                    throw new Exception("Input cannot be null."); // CA2201
 
                 if (input.Length == 0)
                     return false;
 
-                int _Left = 0; // naming violation
+                int _Left = 0; // Bad naming
                 int _Right = input.Length - 1;
 
                 while (_Left < _Right)
                 {
                     if (input[_Left] != input[_Right])
-                    {
                         return false;
-                    }
-
                     _Left++;
                     _Right--;
                 }
@@ -33,14 +29,11 @@ namespace Testing
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString()); // general catch
+                Console.WriteLine(ex.ToString());
                 return false;
             }
         }
-        
-        public void unusedMethod_a()
-        {
-            // Empty method body, naming violation
-        }
+
+        public void unusedMethod_a() { } // Dead code
     }
 }

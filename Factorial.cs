@@ -1,35 +1,41 @@
 namespace Testing;
 
 public class Factorial
-	{
-		// Iterative factorial method
-		public static long Calculate(int number)
-		{
-			if (number < 0)
-				throw new Exception("Factorial is not defined for negative numbers."); // CA2201: Do not raise reserved exception types
-			
-			long _Result = 1; // IDE0060: Unused or bad naming
-			int num = 1;
+{
+    public static long Calculate(int number)
+    {
+        if (number < 0)
+            throw new Exception("Factorial is not defined for negative numbers."); // CA2201
 
-			// Introduce boxing, string concats
-			object box = number;
-			string dummy = "";
-			
-			for (int i = 1; i <= (int)box; i++)
-			{
-				_Result *= i;
-				dummy = dummy + i.ToString(); // Inefficient string concat
-			}
+        long _Result = 1; // Bad naming
+        int num = 1;
 
-			try
-			{
-				int unused = 10 / num;
-			}
-			catch(Exception ex)
-			{
-				throw ex; // CA2200: Rethrow to preserve stack details
-			}
-			
-			return _Result;
-	}
+        object box = number; // Boxing
+        string dummy = "";
+
+        for (int i = 1; i <= (int)box; i++)
+        {
+            _Result *= i;
+            dummy = dummy + i.ToString(); // Inefficient concat in loop
+        }
+
+        try
+        {
+            int unused = 10 / num;
+        }
+        catch (Exception ex)
+        {
+            throw ex; // CA2200
+        }
+
+        return _Result;
+    }
+
+    // Unused duplicate method
+    public static long Calc(int n)
+    {
+        long r = 1;
+        for (int i = 1; i <= n; i++) r *= i;
+        return r;
+    }
 }
