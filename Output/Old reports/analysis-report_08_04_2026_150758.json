@@ -1,0 +1,277 @@
+{
+  "projectKnowledge": {
+    "ProjectName": "Testing",
+    "ProjectPath": "D:\\Rohan\\CodeAnalyzerTesting\\Testing",
+    "SolutionName": "Microsoft.CodeAnalysis.Solution",
+    "GeneratedAt": "2026-08-04T09:37:35.8570587\u002B00:00",
+    "FileCount": 18,
+    "ChunkCount": 32,
+    "AnalyzerCount": 6,
+    "FindingCount": 2,
+    "WarningCount": 2,
+    "ErrorCount": 0,
+    "Metrics": {
+      "fileCount": 18,
+      "chunkCount": 32,
+      "analyzerCount": 6,
+      "findingCount": 2,
+      "warningCount": 2,
+      "errorCount": 0
+    },
+    "Sections": {
+      "project": {
+        "Name": "Project Summary",
+        "Summary": "Project \u0027Testing\u0027 contains 18 files and 32 chunks.",
+        "Details": {
+          "projectName": "Testing",
+          "projectPath": "D:\\Rohan\\CodeAnalyzerTesting\\Testing",
+          "solutionName": "Microsoft.CodeAnalysis.Solution"
+        },
+        "Highlights": [
+          "Normalized project representation",
+          "Ready for downstream consumers"
+        ]
+      },
+      "architecture": {
+        "Name": "Architecture Summary",
+        "Summary": "High-level architectural structure is represented through project metadata and analyzer output.",
+        "Details": {
+          "analyzerCount": 6,
+          "findingCount": 2
+        },
+        "Highlights": [
+          "Architecture-aware summary",
+          "Extensible for future layer-specific rules"
+        ]
+      },
+      "dependencies": {
+        "Name": "Dependency Summary",
+        "Summary": "Dependency information is represented via project and analyzer context without exposing compiler internals.",
+        "Details": {
+          "compilerArtifactsAvailable": true
+        },
+        "Highlights": [
+          "Normalized dependency summary",
+          "No Roslyn dependency in downstream consumers"
+        ]
+      },
+      "metrics": {
+        "Name": "Metrics Summary",
+        "Summary": "Aggregate quality metrics derived from analyzer output.",
+        "Details": {
+          "findingCount": 2,
+          "warningCount": 2,
+          "errorCount": 0
+        },
+        "Highlights": [
+          "Simple quality overview",
+          "Suitable for reports and dashboards"
+        ]
+      },
+      "analyzers": {
+        "Name": "Analyzer Summary",
+        "Summary": "6 analyzers contributed findings to this run.",
+        "Details": {
+          "analyzers": [
+            {
+              "AnalyzerId": "naming-analyzer",
+              "AnalyzerName": "Naming Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "complexity-analyzer",
+              "AnalyzerName": "Complexity Analyzer",
+              "Count": 1
+            },
+            {
+              "AnalyzerId": "architecture-analyzer",
+              "AnalyzerName": "Architecture Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "performance-analyzer",
+              "AnalyzerName": "Performance Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "security-analyzer",
+              "AnalyzerName": "Security Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "custom-code-quality-analyzer",
+              "AnalyzerName": "Custom Code Quality Analyzer",
+              "Count": 1
+            }
+          ]
+        },
+        "Highlights": [
+          "Naming Analyzer",
+          "Complexity Analyzer",
+          "Architecture Analyzer",
+          "Performance Analyzer",
+          "Security Analyzer",
+          "Custom Code Quality Analyzer"
+        ]
+      }
+    },
+    "Metadata": {
+      "source": "KnowledgeBuilder",
+      "version": "1.0",
+      "languages": [
+        "csharp"
+      ]
+    }
+  },
+  "analyzers": [
+    {
+      "AnalyzerId": "naming-analyzer",
+      "AnalyzerName": "Naming Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Maintainability",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "complexity-analyzer",
+      "AnalyzerName": "Complexity Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Maintainability",
+      "Findings": [
+        {
+          "Id": "CA-CMP-001",
+          "RuleId": "CA-CMP-001",
+          "Severity": "warning",
+          "Category": "Maintainability",
+          "Title": "Method Main is large",
+          "Description": "Method \u0027Main\u0027 contains 27 statements, exceeding the maximum limit of 20 statements.",
+          "SourceLocation": {
+            "FilePath": "D:\\Rohan\\CodeAnalyzerTesting\\Testing\\Program.cs",
+            "StartLine": 5,
+            "StartColumn": 21,
+            "EndLine": 5,
+            "EndColumn": 25
+          },
+          "Properties": {
+            "statementCount": 27,
+            "OriginalCode": "public static void Main(string[] args)\r\n\t{\r\n\t\t// =========================\r\n\t\t// Factorial Section\r\n\t\t// =========================\r\n\t\tConsole.Write(\u0022Enter a number to calculate factorial: \u0022);\r\n\t\tstring? input = Console.ReadLine();\r\n\r\n\t\t// Validate input\r\n\t\tif (int.TryParse(input, out int number))\r\n\t\t{\r\n\t\t\ttry\r\n\t\t\t{\r\n\t\t\t\t// Call factorial logic\r\n\t\t\t\tlong factorial = Factorial.Calculate(number);\r\n\r\n\t\t\t\t// Output result\r\n\t\t\t\tConsole.WriteLine($\u0022Factorial of {number} is: {factorial}\u0022);\r\n\t\t\t}\r\n\t\t\tcatch (Exception ex)\r\n\t\t\t{\r\n\t\t\t\t// Handle runtime errors safely\r\n\t\t\t\tConsole.WriteLine($\u0022[ERROR] {ex.Message}\u0022);\r\n\t\t\t}\r\n\t\t}\r\n\t\telse\r\n\t\t{\r\n\t\t\t// Input validation failed\r\n\t\t\tConsole.WriteLine(\u0022[ERROR] Invalid input. Please enter a valid integer.\u0022);\r\n\t\t}\r\n\r\n\t\tConsole.WriteLine();\r\n\r\n\t\t// =========================\r\n\t\t// Armstrong Section\r\n\t\t// =========================\r\n\t\tConsole.Write(\u0022Enter a number to check if it\u0027s an Armstrong number: \u0022);\r\n\t\tstring? armstrongInput = Console.ReadLine();\r\n\r\n\t\t// Validate input\r\n\t\tif (int.TryParse(armstrongInput, out int armstrongNumber))\r\n\t\t{\r\n\t\t\ttry\r\n\t\t\t{\r\n\t\t\t\t// Call Armstrong logic\r\n\t\t\t\tbool isArmstrong = ArmstrongNumber.IsArmstrong(armstrongNumber);\r\n\r\n\t\t\t\t// Replace ternary with if-else\r\n\t\t\t\tConsole.WriteLine(isArmstrong ? $\u0022{armstrongNumber} is an Armstrong number.\u0022 : $\u0022{armstrongNumber} is NOT an Armstrong number.\u0022);\r\n\t\t\t}\r\n\t\t\tcatch (Exception ex)\r\n\t\t\t{\r\n\t\t\t\t// Handle runtime errors safely\r\n\t\t\t\tConsole.WriteLine($\u0022[ERROR] {ex.Message}\u0022);\r\n\t\t\t}\r\n\t\t}\r\n\t\telse\r\n\t\t{\r\n\t\t\t// Input validation failed\r\n\t\t\tConsole.WriteLine(\u0022[ERROR] Invalid input for Armstrong check. Please enter a valid integer.\u0022);\r\n\t\t}\r\n\r\n\t\tCondition condition = new Condition();\r\n\t\tcondition.CheckCondition();\r\n\t}"
+          },
+          "AIExplanation": "",
+          "RecommendedFix": "",
+          "AlternativeFix": "",
+          "BestPractice": ""
+        }
+      ],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "architecture-analyzer",
+      "AnalyzerName": "Architecture Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Architecture",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "performance-analyzer",
+      "AnalyzerName": "Performance Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Performance",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "security-analyzer",
+      "AnalyzerName": "Security Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Security",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "custom-code-quality-analyzer",
+      "AnalyzerName": "Custom Code Quality Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Maintainability",
+      "Findings": [
+        {
+          "Id": "CA-CQ-004",
+          "RuleId": "CA-CQ-004",
+          "Severity": "warning",
+          "Category": "maintainability",
+          "Pillar": "maintainability",
+          "Title": "Magic string literal detected",
+          "Description": "Magic string literal detected: \u0022Checking condition. Flag value: {Flag}\u0022",
+          "SourceLocation": {
+            "FilePath": "D:\\Rohan\\CodeAnalyzerTesting\\Testing\\Condition.cs",
+            "StartLine": 21,
+            "StartColumn": 13,
+            "EndLine": 21,
+            "EndColumn": 53
+          },
+          "Properties": {
+            "pillar": "maintainability"
+          },
+          "AIExplanation": "",
+          "RecommendedFix": "",
+          "AlternativeFix": "",
+          "BestPractice": ""
+        }
+      ],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    }
+  ],
+  "aIResults": [
+    {
+      "Provider": "unknown",
+      "Summary": "AI analysis skipped because the provider was unavailable.",
+      "Findings": [],
+      "Suggestions": [],
+      "RefactoringRecommendations": [],
+      "Risks": [],
+      "Extras": {},
+      "Execution": {
+        "Provider": "unknown",
+        "PromptStrategy": "executive-summary",
+        "Duration": "00:00:21.5276468",
+        "RetryCount": 0,
+        "PromptLength": 10027,
+        "ResponseLength": 0,
+        "ParsedSuccessfully": false,
+        "UsedFallback": true,
+        "Success": false,
+        "FailureReason": "All configured AI providers failed.",
+        "ExecutedAtUtc": "2026-08-04T09:37:57.4011619Z"
+      }
+    }
+  ],
+  "issues": [],
+  "quality": {
+    "TotalIssues": 2,
+    "ErrorCount": 0,
+    "WarningCount": 2,
+    "Score": 99.9,
+    "PillarScores": {
+      "Naming": 25,
+      "Structure": 20,
+      "Design": 20,
+      "Exception": 10,
+      "Async": 10,
+      "Maintainability": 10,
+      "Security": 5
+    }
+  },
+  "artifacts": []
+}

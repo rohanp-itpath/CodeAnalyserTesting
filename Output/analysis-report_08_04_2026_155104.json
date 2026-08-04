@@ -1,0 +1,253 @@
+{
+  "projectKnowledge": {
+    "ProjectName": "Testing",
+    "ProjectPath": "D:\\Rohan\\CodeAnalyzerTesting\\Testing",
+    "SolutionName": "Microsoft.CodeAnalysis.Solution",
+    "GeneratedAt": "2026-08-04T10:20:41.9279366\u002B00:00",
+    "FileCount": 22,
+    "ChunkCount": 40,
+    "AnalyzerCount": 6,
+    "FindingCount": 1,
+    "WarningCount": 1,
+    "ErrorCount": 0,
+    "Metrics": {
+      "fileCount": 22,
+      "chunkCount": 40,
+      "analyzerCount": 6,
+      "findingCount": 1,
+      "warningCount": 1,
+      "errorCount": 0
+    },
+    "Sections": {
+      "project": {
+        "Name": "Project Summary",
+        "Summary": "Project \u0027Testing\u0027 contains 22 files and 40 chunks.",
+        "Details": {
+          "projectName": "Testing",
+          "projectPath": "D:\\Rohan\\CodeAnalyzerTesting\\Testing",
+          "solutionName": "Microsoft.CodeAnalysis.Solution"
+        },
+        "Highlights": [
+          "Normalized project representation",
+          "Ready for downstream consumers"
+        ]
+      },
+      "architecture": {
+        "Name": "Architecture Summary",
+        "Summary": "High-level architectural structure is represented through project metadata and analyzer output.",
+        "Details": {
+          "analyzerCount": 6,
+          "findingCount": 1
+        },
+        "Highlights": [
+          "Architecture-aware summary",
+          "Extensible for future layer-specific rules"
+        ]
+      },
+      "dependencies": {
+        "Name": "Dependency Summary",
+        "Summary": "Dependency information is represented via project and analyzer context without exposing compiler internals.",
+        "Details": {
+          "compilerArtifactsAvailable": true
+        },
+        "Highlights": [
+          "Normalized dependency summary",
+          "No Roslyn dependency in downstream consumers"
+        ]
+      },
+      "metrics": {
+        "Name": "Metrics Summary",
+        "Summary": "Aggregate quality metrics derived from analyzer output.",
+        "Details": {
+          "findingCount": 1,
+          "warningCount": 1,
+          "errorCount": 0
+        },
+        "Highlights": [
+          "Simple quality overview",
+          "Suitable for reports and dashboards"
+        ]
+      },
+      "analyzers": {
+        "Name": "Analyzer Summary",
+        "Summary": "6 analyzers contributed findings to this run.",
+        "Details": {
+          "analyzers": [
+            {
+              "AnalyzerId": "naming-analyzer",
+              "AnalyzerName": "Naming Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "complexity-analyzer",
+              "AnalyzerName": "Complexity Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "architecture-analyzer",
+              "AnalyzerName": "Architecture Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "performance-analyzer",
+              "AnalyzerName": "Performance Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "security-analyzer",
+              "AnalyzerName": "Security Analyzer",
+              "Count": 0
+            },
+            {
+              "AnalyzerId": "custom-code-quality-analyzer",
+              "AnalyzerName": "Custom Code Quality Analyzer",
+              "Count": 1
+            }
+          ]
+        },
+        "Highlights": [
+          "Naming Analyzer",
+          "Complexity Analyzer",
+          "Architecture Analyzer",
+          "Performance Analyzer",
+          "Security Analyzer",
+          "Custom Code Quality Analyzer"
+        ]
+      }
+    },
+    "Metadata": {
+      "source": "KnowledgeBuilder",
+      "version": "1.0",
+      "languages": [
+        "csharp"
+      ]
+    }
+  },
+  "analyzers": [
+    {
+      "AnalyzerId": "naming-analyzer",
+      "AnalyzerName": "Naming Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Maintainability",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "complexity-analyzer",
+      "AnalyzerName": "Complexity Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Maintainability",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "architecture-analyzer",
+      "AnalyzerName": "Architecture Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Architecture",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "performance-analyzer",
+      "AnalyzerName": "Performance Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Performance",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "security-analyzer",
+      "AnalyzerName": "Security Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Security",
+      "Findings": [],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    },
+    {
+      "AnalyzerId": "custom-code-quality-analyzer",
+      "AnalyzerName": "Custom Code Quality Analyzer",
+      "Version": "CodeAnalyzer.Models.Versioning.AnalyzerVersion",
+      "Category": "Maintainability",
+      "Findings": [
+        {
+          "Id": "CA-CQ-004",
+          "RuleId": "CA-CQ-004",
+          "Severity": "warning",
+          "Category": "maintainability",
+          "Pillar": "maintainability",
+          "Title": "Magic string literal detected",
+          "Description": "Magic string literal detected: \u0022Checking condition. Flag value: {Flag}\u0022",
+          "SourceLocation": {
+            "FilePath": "D:\\Rohan\\CodeAnalyzerTesting\\Testing\\Condition.cs",
+            "StartLine": 21,
+            "StartColumn": 13,
+            "EndLine": 21,
+            "EndColumn": 53
+          },
+          "Properties": {
+            "pillar": "maintainability"
+          },
+          "AIExplanation": "",
+          "RecommendedFix": "",
+          "AlternativeFix": "",
+          "BestPractice": ""
+        }
+      ],
+      "Diagnostics": [],
+      "Metrics": {},
+      "Artifacts": {}
+    }
+  ],
+  "aIResults": [
+    {
+      "Provider": "unknown",
+      "Summary": "AI analysis skipped because the provider was unavailable.",
+      "Findings": [],
+      "Suggestions": [],
+      "RefactoringRecommendations": [],
+      "Risks": [],
+      "Extras": {},
+      "Execution": {
+        "Provider": "unknown",
+        "PromptStrategy": "executive-summary",
+        "Duration": "00:00:21.5658088",
+        "RetryCount": 0,
+        "PromptLength": 5980,
+        "ResponseLength": 0,
+        "ParsedSuccessfully": false,
+        "UsedFallback": true,
+        "Success": false,
+        "FailureReason": "All configured AI providers failed.",
+        "ExecutedAtUtc": "2026-08-04T10:21:03.5100012Z"
+      }
+    }
+  ],
+  "issues": [],
+  "quality": {
+    "TotalIssues": 1,
+    "ErrorCount": 0,
+    "WarningCount": 1,
+    "Score": 100,
+    "PillarScores": {
+      "Naming": 25,
+      "Structure": 20,
+      "Design": 20,
+      "Exception": 10,
+      "Async": 10,
+      "Maintainability": 10,
+      "Security": 5
+    }
+  },
+  "artifacts": []
+}
