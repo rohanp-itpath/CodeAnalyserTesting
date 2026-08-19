@@ -6,7 +6,7 @@ namespace Testing
 {
     public class Condition
     {
-        private bool _isFlag; // Should be readonly
+        private bool _isFlag; 
         private ILogger<Condition> _logger;
 
         public ArrayList _DummyList = new ArrayList(); 
@@ -23,14 +23,14 @@ namespace Testing
             {
                 if (_logger != null)
                 {
-                    _logger.LogInformation("Checking condition. Flag value: " + _isFlag.ToString()); // String concat in log
+                    _logger.LogInformation("Checking condition. Flag value: " + _isFlag.ToString()); 
                 }
 
-                Console.WriteLine("Condition checked"); // Console in lib code
+                Console.WriteLine("Condition checked"); 
             }
             catch (Exception e)
             {
-                throw e; // CA2200
+                throw e; 
             }
         }
 
