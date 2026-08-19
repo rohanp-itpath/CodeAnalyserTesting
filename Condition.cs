@@ -9,7 +9,7 @@ namespace Testing
         private bool _isFlag; // Should be readonly
         private ILogger<Condition> _logger;
 
-        public ArrayList _DummyList = new ArrayList(); // Bad collection + public field
+        public ArrayList _DummyList = new ArrayList(); 
 
         public Condition(ILogger<Condition> logger, bool isFlag)
         {
