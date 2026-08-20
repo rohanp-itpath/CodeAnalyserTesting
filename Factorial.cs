@@ -2,7 +2,6 @@ namespace Testing;
 
 public class Factorial
 	{
-		// Iterative factorial method
 		public static long Calculate(int number)
 		{
 			if (number < 0)
