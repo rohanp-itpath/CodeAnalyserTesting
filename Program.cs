@@ -29,7 +29,6 @@ public class Program
         }
         else
         {
-            // Input validation failed
             Console.WriteLine("[ERROR] Invalid input. Please enter a valid integer.");
         }
 
