@@ -39,6 +39,9 @@ public class Condition
     // ⚠️ WARNING: [Medium Priority - maintainability]
     // ISSUE: [CA-CQ-004] Magic string literal detected: "Checking condition. Flag value: {Flag}"
     // SUGGESTED SOLUTION: Review the static analysis violation and adjust the code according to best practices.
+    // ⚠️ WARNING: [Medium Priority - maintainability]
+    // ISSUE: [CA-CQ-004] Magic string literal detected: "Checking condition. Flag value: {Flag}"
+    // SUGGESTED SOLUTION: Review the static analysis violation and adjust the code according to best practices.
             "Checking condition. Flag value: {Flag}",
             _isFlag);
 
