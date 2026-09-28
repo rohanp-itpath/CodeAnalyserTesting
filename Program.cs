@@ -1,7 +1,16 @@
+using System.Runtime.CompilerServices;
 using Testing;
+
+
 
 public class Program
 {
+    private class Roles
+    {
+        public const string Admin = "Admin";
+        public const string User = "User";
+        public const string Guest = "Guest";
+    }
     public static void Main(string[] args)
     {
         // =========================
