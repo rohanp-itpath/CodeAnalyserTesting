@@ -15,4 +15,18 @@ public class Factorial
 			}
 			return result;
 	}
+
+		// Duplicate of the iterative factorial method (intentionally duplicated)
+		public static long CalculateDuplicate(int number)
+		{
+			if (number < 0)
+				throw new ArgumentException("Factorial is not defined for negative numbers.");
+
+			long result = 1;
+			for (int i = 1; i <= number; i++)
+			{
+				result *= i;
+			}
+			return result;
+	}
 }
