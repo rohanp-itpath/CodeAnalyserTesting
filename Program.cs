@@ -13,8 +13,8 @@ public class Program
         // Validate input
         if (int.TryParse(input, out int number))
         {
-            try
-            {
+            //try
+            //{
                 // Call factorial logic
                 long factorial = Factorial.Calculate(number);
 
