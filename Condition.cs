@@ -15,7 +15,7 @@ public class Condition
 		_isFlag = isFlag;
 	}
 
-	public void CheckCondition()
+	public void checkCondition()
 	{
         _logger?.LogInformation(
             "Checking condition. Flag value: {Flag}",
