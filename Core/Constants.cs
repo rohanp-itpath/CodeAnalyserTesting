@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Testing.Core
 {
-   public class Roles
+   public class roles
     {
         public const string Admin = "Admin";
         public const string User = "User";
