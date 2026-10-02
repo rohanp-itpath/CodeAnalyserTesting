@@ -3,7 +3,7 @@ namespace Testing;
 public class Factorial
 	{
 		// Iterative factorial method
-		public static long Calculate(int number)
+		public static long calculate(int number)
 		{
 			if (number < 0)
 				throw new ArgumentException("Factorial is not defined for negative numbers.");
