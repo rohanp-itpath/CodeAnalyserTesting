@@ -21,6 +21,6 @@ public class Condition
             "Checking condition. Flag value: {Flag}",
             _isFlag);
 
-        Console.WriteLine("Condition checked");
+		Console.WriteLine("Condition checked");
     }
 }
