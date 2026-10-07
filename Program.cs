@@ -11,7 +11,7 @@ public class Program
         string? input = Console.ReadLine();
 
         // Validate input
-        if (int.TryParse(input, out int number))
+        //if (int.TryParse(input, out int number))
         {
             try
             {
