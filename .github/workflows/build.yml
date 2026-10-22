@@ -1,0 +1,61 @@
+# Run SonarQube analysis when code is pushed or a pull request changes.
+name: SonarQube Analysis
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+# Allow the workflow to read repository contents.
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and Analyze
+    runs-on: windows-latest
+
+    steps:
+      # Check out the repository with full Git history for SonarQube analysis.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Install the .NET 8 SDK.
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # Install SonarScanner for .NET.
+      - name: Install SonarScanner
+        shell: pwsh
+        run: dotnet tool install --global dotnet-sonarscanner
+
+      # Begin analysis using the exact existing SonarQube project key.
+      - name: Begin SonarQube Analysis
+        shell: pwsh
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        run: >
+          dotnet sonarscanner begin
+          /k:"rohanp-itpath_CodeAnalyserTesting_18387e2b-08e6-42c6-bb8a-47befc8ca6f4"
+          /d:sonar.host.url="$env:SONAR_HOST_URL"
+          /d:sonar.token="$env:SONAR_TOKEN"
+
+      # Build the solution so SonarScanner can collect analysis data.
+      - name: Build Solution
+        shell: pwsh
+        run: dotnet build ./Testing.slnx --no-incremental
+
+      # End analysis and upload the report to SonarQube.
+      - name: End SonarQube Analysis
+        if: ${{ success() }}
+        shell: pwsh
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: dotnet sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
